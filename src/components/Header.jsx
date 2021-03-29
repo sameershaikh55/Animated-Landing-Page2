@@ -1,4 +1,7 @@
 import React from 'react'
+import ProgressiveImage from "react-progressive-image";
+import Img from '../assets/Main Banner.png'
+
 
 const Header = () => {
 
@@ -91,6 +94,26 @@ const Header = () => {
 				</div>
 			</div>
 		</div>
+        <div>
+        <ProgressiveImage  delay={400} src={Img} placeholder={Img}>
+		{(src, loading) => (
+		<div className="home_container">
+			<img
+				style={{
+				filter: loading ? "blur(4px)" : "blur(0px)",
+				}}
+				src={src}
+				alt="bacground"
+			/>
+			<div className="home_body">
+				<div className="home_body_inner">
+					hello world
+				</div>
+			</div>
+		</div>
+		)}
+		</ProgressiveImage>
+        </div>
         </div>
     )
 }

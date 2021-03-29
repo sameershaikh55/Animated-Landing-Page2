@@ -479,3 +479,48 @@ body {
 	margin-right: 1rem;
 }
 /* ==================== MANUFACTURING CARD STYLING END ==================== */
+
+/* ==================== DELIVERY DETAILS STYLING START ==================== */
+.deliveryDetails_container {
+	margin: auto;
+	padding-bottom: 20rem;
+	max-width: 1000px;
+	display: flex;
+}
+
+.deliveryDetails_container .left_side {
+	width: 50%;
+	margin-right: 20px;
+}
+
+.deliveryDetails_container .left_side h1,
+.deliveryDetails_container .right_side h1 {
+	font-size: 2.2rem;
+}
+
+.deliveryDetails_container .right_side h1,
+.deliveryDetails_container .right_side h5 {
+	text-align: center;
+}
+
+.deliveryDetails_container .left_side h5,
+.deliveryDetails_container .right_side h5 {
+	color: var(--lightParagraph);
+	font-size: 1.4rem;
+}
+
+.deliveryDetails_container .right_side {
+	width: 50%;
+	margin-left: 20px;
+}
+/* ==================== DELIVERY DETAILS STYLING END ==================== */
+
+/* ==================== EXAMPLE STYLING START ==================== */
+.examples_container {
+	margin: auto;
+	padding: 20rem 0px;
+	max-width: 1000px;
+	text-align: center;
+}
+
+/* ==================== EXAMPLE STYLING END ==================== */

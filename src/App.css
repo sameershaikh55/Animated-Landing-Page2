@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  background-color: black;
+  height: 200vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* ==================== LOGO NAVBAR STYLING START ======================== */
+.NavbarContainer h1 {
+	cursor: pointer;
+}
+/* ==================== LOGO NAVBAR STYLING END ======================== */
+
+/* ==================== NAVBAR STYLING START ======================== */
+@media screen and (min-width: 1200px) {
+	.NavbarBelowContainer {
+		max-width: 1140px;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.NavbarBelowContainer {
+	max-width: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.NavbarContainer {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2.5rem 10rem;
+	transition: 0.7s;
+	z-index: 10000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavbarContainer h1 {
+	color: white;
+	font-size: 3.2rem;
+	letter-spacing: 0.3rem;
+	transition: 0.7s;
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
 }
+
+.NavbarContainer ul {
+	margin-bottom: 0;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.7s;
+}
+
+.NavbarContainer ul li {
+	position: relative;
+	list-style-type: none;
+	transition: 0.7s;
+}
+
+.NavbarContainer ul li {
+	font-size: 1.5rem;
+	margin: 0rem 2rem;
+	font-weight: 60rem;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	transition: 0.7s;
+	cursor: pointer;
+}
+
+.NavbarContainer ul li a {
+	text-decoration: none;
+	padding: 3px 8px;
+}
+
+.NavbarContainer ul li:hover {
+	color: white;
+	background-color: var(--SubThemeC2);
+	border-radius: 6px;
+	padding: 2px 0px;
+	transition: 1s;
+}
+
+.activeNav {
+	color: white;
+	background-color: var(--SubThemeC2);
+	border-radius: 6px;
+	padding: 3px 8px !important;
+	transition: 1s;
+}
+
+.activeNav:hover {
+	color: white;
+}
+
+.NavbarContainer.sticky {
+	box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
+	position: fixed;
+	margin-top: 0rem;
+	padding: 1.5rem 10rem;
+	background-color: var(--MainThemeC);
+}
+
+.NavbarContainer.sticky ul li {
+	color: white;
+}
+
+/* .NavbarContainer.sticky ul li .activeNav {
+	border-bottom: 2px solid white;
+} */
+
+.HideClass {
+	display: none;
+}
+
+.NavbarContainer .navbar-toggler {
+	padding: 2px 10px;
+	background: #007bfc;
+}
+
+.NavbarContainer .menu-btn {
+	vertical-align: middle;
+}
+
+.NavbarToggleBtn {
+	display: none;
+}
+
+.NavbarContainer .menu-btn .line {
+	width: 25px;
+	height: 2px;
+	background-color: #ffffff;
+	display: block;
+	margin: 7px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+	.NavbarContainer,
+	.NavbarContainer.sticky {
+		padding: 2.5rem 5rem;
+	}
+	/* .NavbarContainer h1,
+	.NavbarContainer.sticky h1 {
+		font-size: 2.2rem;
+	} */
+}
+
+@media screen and (max-width: 1024px) {
+	.NavbarContainer,
+	.NavbarContainer.sticky {
+		padding: 2.5rem 6rem;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.NavbarContainer.sticky {
+		background-color: var(--MainThemeC);
+	}
+	.HideClass {
+		display: block;
+	}
+	.NavbarContainer.sticky .HideClass i {
+		color: white;
+	}
+	.NavbarContainer.sticky h1 {
+		color: white;
+	}
+	.NavbarContainer ul {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.NavbarContainer,
+	.NavbarContainer.sticky {
+		padding: 2rem 1.5rem;
+	}
+}
+
+/* ==================== NAVBAR STYLING END ======================== */

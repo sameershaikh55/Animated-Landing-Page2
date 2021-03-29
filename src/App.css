@@ -1,21 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 * {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+	padding: 0%;
+	margin: 0%;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+:root {
+	--themeColor: #7ecc3c;
+	--lightParagraph: #808080;
 }
 
 html {
-  font-size: 62.5%;
-  background-color: black;
-  height: 200vh;
+	font-size: 62.5%;
 }
 
 body {
 	width: 100%;
 }
+
+/* ==================== GLOBAL CLASSES START ======================== */
+.G_btn {
+	padding: 10px 24px;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--themeColor);
+	color: white;
+	font-size: 1.5rem;
+	letter-spacing: 1.3px;
+	font-weight: 600;
+}
+
+.heading_underline {
+	border-bottom: 4px solid var(--themeColor);
+}
+/* ==================== GLOBAL CLASSES END ======================== */
 
 /* ==================== LOGO NAVBAR STYLING START ======================== */
 .NavbarContainer h1 {
@@ -42,17 +62,15 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2.5rem 10rem;
 	transition: 0.7s;
 	z-index: 10000;
+	padding: 0rem 1.5rem;
+	border-bottom: 1px solid #707070;
 }
 
-.NavbarContainer h1 {
-	color: white;
-	font-size: 3.2rem;
-	letter-spacing: 0.3rem;
-	transition: 0.7s;
-	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+.NavbarContainer img {
+	height: 4.2rem;
+	margin-left: 1rem;
 }
 
 .NavbarContainer ul {
@@ -71,14 +89,17 @@ body {
 }
 
 .NavbarContainer ul li {
-	font-size: 1.5rem;
-	margin: 0rem 2rem;
+	font-size: 1.3rem;
 	font-weight: 60rem;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
 	color: white;
 	transition: 0.7s;
 	cursor: pointer;
+	height: 100%;
+	height: 57px;
+	padding: 16px;
+	border-left: 0.1px solid #707070;
 }
 
 .NavbarContainer ul li a {
@@ -87,10 +108,7 @@ body {
 }
 
 .NavbarContainer ul li:hover {
-	color: white;
-	background-color: var(--SubThemeC2);
-	border-radius: 6px;
-	padding: 2px 0px;
+	background-color: var(--themeColor);
 	transition: 1s;
 }
 
@@ -110,8 +128,7 @@ body {
 	box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
 	position: fixed;
 	margin-top: 0rem;
-	padding: 1.5rem 10rem;
-	background-color: var(--MainThemeC);
+	background-color: black;
 }
 
 .NavbarContainer.sticky ul li {
@@ -222,12 +239,243 @@ body {
 
 .home_container .home_body .home_body_inner {
 	height: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.home_body_inner h1 {
+	font-size: 4.2rem;
+}
+
+.home_body_inner h4 {
+	font-size: 1.8rem;
 }
 
 /* ==================== HOME STYLING END ======================== */
 
+/* ==================== ABOUT US STYLING START ======================== */
+.about_container {
+	padding: 20rem 0rem;
+	margin: auto;
+	display: flex;
+	max-width: 1000px;
+}
+
+.about_container .rightSide_text {
+	width: 50%;
+	margin-right: 40px;
+}
+
+.about_container .rightSide_text h1 {
+	font-size: 3rem;
+}
+
+.about_container .rightSide_text h4 {
+	line-height: 20px;
+	color: var(--lightParagraph);
+}
+
+.about_container .about_img {
+	width: 50%;
+}
+
+.about_container .about_img img {
+	height: auto;
+	width: 100%;
+}
+/* ==================== ABOUT US STYLING END ======================== */
+
+/* ==================== SERVICES STYLING START ======================== */
+.service_container {
+	text-align: center;
+	margin: auto;
+	padding-bottom: 20rem;
+	max-width: 1000px;
+}
+
+.service_container h1 {
+	font-size: 3rem;
+	margin-bottom: 1.8rem;
+}
+
+.service_container h5 {
+	font-size: 1.3rem;
+	max-width: 750px;
+	margin: auto;
+	color: var(--lightParagraph);
+}
+
+.service_container .main_slider_container {
+	text-align: -webkit-center;
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+}
+/* ==================== SERVICES STYLING END ======================== */
+
+/* ==================== SERVICE CARD STYLING START ======================== */
+.serviceCard_container {
+	max-width: 92%;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 1px 1px 20px #e9e9e9;
+	border: 1px solid #ebebeb;
+}
+
+.serviceCard_container .img_container img {
+	height: auto;
+	width: 100%;
+}
+
+.serviceCard_container .body_text {
+	padding: 2.5rem 2.5rem 1rem 2.5rem;
+}
+
+.service_container .rPadding {
+	padding: 2.5rem 1.1rem 1rem 1.1rem;
+}
+
+.serviceCard_container .body_text h3 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.serviceCard_container .body_text h6 {
+	font-size: 1.2rem;
+	color: var(--lightParagraph);
+	line-height: 1.8rem;
+}
+
+.serviceCard_container .body_text button {
+	border: none;
+	display: flex;
+	align-items: center;
+	margin: 1.5rem auto;
+	background-color: transparent;
+	transition: 0.5s all;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+}
+
+.serviceCard_container .body_text button:hover {
+	color: var(--themeColor);
+}
+
+.serviceCard_container .body_text button span:nth-child(1) {
+	font-size: 1.3rem;
+	margin-right: 1rem;
+}
+
+/* ==================== SERVICE CARD STYLING END ======================== */
+
+/* ==================== SLICK SLIDER STYLING START ==================== */
+.slick-prev:before,
+.slick-next:before {
+	font-size: 28px !important;
+	opacity: 0.75 !important;
+	color: #c4c4c4 !important;
+}
+
+.slick-dots {
+	bottom: -40px !important;
+}
+
+.slick-dots li button:before {
+	font-size: 10px !important;
+}
+
+.slick-dots li {
+	margin: 0px !important;
+}
+
+.slick-dots li.slick-active button:before {
+	color: #000000cf !important;
+}
+
+.slick-dots li button:before {
+	color: #3e3e3e;
+}
+/* ==================== SLICK SLIDER STYLING END ==================== */
+
+/* ==================== MANUFACTURING STYLING START ==================== */
+.manufacturing_container {
+	text-align: center;
+	margin: auto;
+	padding-bottom: 20rem;
+	max-width: 1000px;
+}
+
+.manufacturing_container h5 {
+	margin: auto;
+	max-width: 660px;
+	text-align: start;
+	color: var(--lightParagraph);
+}
+
+.manufacturing_container .main_slider_container {
+	text-align: -webkit-center;
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+}
+
+/* ==================== MANUFACTURING STYLING END ==================== */
+
+/* ==================== MANUFACTURING CARD STYLING START ==================== */
+.manufacturingCard_container {
+	max-width: 92%;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 1px 1px 20px #e9e9e9;
+	border: 1px solid #ebebeb;
+	border-radius: 0px 50px;
+}
+
+.manufacturingCard_container .img_container img {
+	height: auto;
+	width: 100%;
+	padding: 20px;
+}
+
+.manufacturingCard_container .body_text {
+	padding: 2.5rem 2.5rem 1rem 2.5rem;
+}
+
+.service_container .rPadding {
+	padding: 2.5rem 1.1rem 1rem 1.1rem;
+}
+
+.manufacturingCard_container .body_text h3 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.manufacturingCard_container .body_text h6 {
+	font-size: 1.2rem;
+	color: var(--lightParagraph);
+	line-height: 1.8rem;
+}
+
+.manufacturingCard_container .body_text button {
+	border: none;
+	display: flex;
+	align-items: center;
+	margin: 1.5rem auto;
+	background-color: transparent;
+	transition: 0.5s all;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+}
+
+.manufacturingCard_container .body_text button:hover {
+	color: var(--themeColor);
+}
+
+.manufacturingCard_container .body_text button span:nth-child(1) {
+	font-size: 1.3rem;
+	margin-right: 1rem;
+}
+/* ==================== MANUFACTURING CARD STYLING END ==================== */

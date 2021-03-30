@@ -10,20 +10,28 @@ import DeliveryDetails from "./components/DeliveryDetails";
 import Examples from "./components/Examples";
 import StartUp from "./components/StartUp";
 import Delivery from "./components/Delivery";
+import OurWork from "./components/OurWork";
+import WhyChooseUS from "./components/WhyChooseUS";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <AboutUs />
-      <Services />
-      <Manufacturing />
-      <DeliveryDetails />
-      <Examples />
-      <StartUp />
-      <Delivery />
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			<AboutUs />
+			<Services />
+			<Manufacturing />
+			<DeliveryDetails />
+			<Examples />
+			<StartUp />
+			<OurWork />
+			<Delivery />
+			<WhyChooseUS />
+			<Contact />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

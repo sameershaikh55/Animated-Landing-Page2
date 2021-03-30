@@ -8,35 +8,32 @@ import example6 from "../assets/example6.svg";
 import ExampleCard from "./ExampleCard";
 
 const Examples = () => {
-
 	const data = [
-		{ img: example1, title: "Industrial" },
-		{ img: example2, title: "Industrial" },
-		{ img: example3, title: "Industrial" },
-		{ img: example4, title: "Industrial" },
-		{ img: example5, title: "Industrial" },
-		{ img: example6, title: "Industrial" }
-	]
+		{ img: example1, title: "Industriel" },
+		{ img: example2, title: "Pharmaceutique" },
+		{ img: example3, title: "Robotique" },
+		{ img: example4, title: "Automobile" },
+		{ img: example5, title: "Transport" },
+		{ img: example6, title: "Professionnels ET start-ups" },
+	];
 
 	return (
 		<div className="examples_container">
-		<div className="innerExamples_container">
-			<h1>
-				<span className="heading_underline">EXEM</span>PLES
-			</h1>
-			<br />
-			<br />
-			<div className="container-fluid">
-				<div className="row">
-					{data.map((prev) => {
-						const { title, img } = prev;
-						return(
-							<ExampleCard  img={img} title={title} />
-					);
-					})}
+			<div className="innerExamples_container">
+				<h1>
+					<span className="heading_underline">EXEM</span>PLES
+				</h1>
+				<br />
+				<br />
+				<div className="container-fluid">
+					<div className="row">
+						{data.map((prev) => {
+							const { title, img } = prev;
+							return <ExampleCard img={img} title={title} />;
+						})}
+					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	);
 };

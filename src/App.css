@@ -554,3 +554,57 @@ body {
 }
 /* ==================== EXAMPLE CARD STYLING END ==================== */
 
+/* ==================== START UP STYLING START ==================== */
+.startUp_container{
+	background-color: #f0f0f0;
+}
+
+.startUp_container .innerStartUp_container {
+	margin: auto;
+	padding: 10rem 0px;
+	max-width: 1000px;
+}
+
+.startUp_container .innerStartUp_container h1 {
+	text-align: center;
+}
+
+.startUp_container .innerStartUp_container .startUp_body {
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.startUp_container .innerStartUp_container .startUp_body div:nth-child(1) {
+	margin-right: 2rem;
+}
+
+.startUp_container .innerStartUp_container .startUp_body div:nth-child(1),
+.startUp_container .innerStartUp_container .startUp_body div:nth-child(2) {
+	width: 50%;
+}
+
+.startUp_container .innerStartUp_container .startUp_body div:nth-child(2) img {
+	width: 100%;
+}
+
+/* ==================== START UP STYLING END ==================== */
+
+
+/* ==================== DELIVERY SLIDER STYLING START ==================== */
+.deliverySlider_conatiner {
+	background: linear-gradient(rgba(31,40,51,.5),rgba(31,40,51,.5)), url(./assets/deliveryImage.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10rem 0rem;
+	text-align: center;
+	color: #fff;
+}
+
+.deliveryDetails_container .innerDeliverySlider_conatiner {
+
+}
+/* ==================== DELIVERY SLIDER STYLING END ==================== */
+

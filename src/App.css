@@ -14,6 +14,7 @@
 
 html {
 	font-size: 62.5%;
+	width: 100%;
 }
 
 body {
@@ -483,7 +484,7 @@ body {
 /* ==================== DELIVERY DETAILS STYLING START ==================== */
 .deliveryDetails_container {
 	margin: auto;
-	padding-bottom: 20rem;
+	padding-bottom: 15rem;
 	max-width: 1000px;
 	display: flex;
 }
@@ -517,10 +518,39 @@ body {
 
 /* ==================== EXAMPLE STYLING START ==================== */
 .examples_container {
+	background-color: #f0f0f0;
+}
+
+
+.examples_container .innerExamples_container {
 	margin: auto;
-	padding: 20rem 0px;
+	padding: 10rem 0px;
 	max-width: 1000px;
 	text-align: center;
 }
 
+.examples_container .innerExamples_container h1 {
+	margin-bottom: 2rem;
+}
 /* ==================== EXAMPLE STYLING END ==================== */
+
+/* ==================== EXAMPLE CARD STYLING START ==================== */
+.example_card {
+	margin-bottom: 2.5rem;
+}
+.example_card img {
+	width: 100%;
+	box-shadow: 1px 1px 20px #e9e9e9;
+    border: 1px solid #ebebeb;
+}
+
+.example_card h2 {
+	background-color: #ffffff;
+	padding: 1rem 0rem;
+	border-radius: 0px 0px 6px 6px;
+	box-shadow: 1px 1px 20px #e9e9e9;
+    border: 1px solid #ebebeb;
+	border-top: none;
+}
+/* ==================== EXAMPLE CARD STYLING END ==================== */
+

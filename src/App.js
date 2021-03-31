@@ -14,24 +14,28 @@ import OurWork from "./components/OurWork";
 import WhyChooseUS from "./components/WhyChooseUS";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Application from "./components/Application";
+import Material from "./components/Material";
 
 function App() {
-	return (
-		<div>
-			<Header />
-			<AboutUs />
-			<Services />
-			<Manufacturing />
-			<DeliveryDetails />
-			<Examples />
-			<StartUp />
-			<OurWork />
-			<Delivery />
-			<WhyChooseUS />
-			<Contact />
-			<Footer />
-		</div>
-	);
+  return (
+    <div>
+      <Header />
+      <AboutUs />
+      <Services />
+      <Manufacturing />
+      <DeliveryDetails />
+      <Examples />
+      <Application />
+      <StartUp />
+      <Material />
+      <OurWork />
+      <Delivery />
+      <WhyChooseUS />
+      <Contact />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

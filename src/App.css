@@ -17,6 +17,15 @@ html {
 	width: 100%;
 }
 
+/* MEDIA QUERIES FONT SIZE START */
+@media screen and (max-width: 1000px){
+	html {
+		font-size: 60%;
+	}
+}
+/* MEDIA QUERIES FONT SIZE END */
+
+
 body {
 	width: 100%;
 }
@@ -805,4 +814,115 @@ body {
 	font-size: 1.3rem;
 	line-height: 2rem;
 }
-/* ==================== FOOTER STYLING END ==================== */ ;
+/* ==================== FOOTER STYLING END ==================== */ 
+
+/* ==================== EXAMPLES APPLICATION STYLING START ==================== */
+.application_container {
+	background: url(./assets/exampleBg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	padding: 16rem 0rem;
+}
+
+.application_container .innerApplication_container {
+	margin: auto;
+	max-width: 1000px;
+}
+
+.application_container h1 {
+	text-align: center;
+	font-size: 3rem;
+	color: #fff;
+}
+
+.application_container .innerApplication_container .application_card {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.application_container .innerApplication_container .application_card img {
+	height: 4.2rem;
+	margin-right: 1.3rem;
+}
+
+.application_container .innerApplication_container .application_card .applicationCard_body h3 {
+	color: white;
+	font-size: 1.9rem;
+}
+
+.application_container .innerApplication_container .application_card .applicationCard_body h5 {
+	color: var(--lightParagraph);
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+
+.application_container .innerApplication_container .application_card .applicationCard_body button {
+	font-size: 1.5rem;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--themeColor);
+}
+
+
+/* ==================== EXAMPLES APPLICATION STYLING END ==================== */ 
+
+/* ==================== MATERIAL SECTION STYLING START ==================== */ 
+.materialCard_heading {
+	border-top: 7px solid var(--themeColor);
+	border-left: 7px solid var(--themeColor);
+	padding-left: 4px;
+}
+
+
+.material_container {
+	margin: auto;
+	max-width: 1000px;
+	padding: 12rem 0rem 0rem 0rem;
+}
+
+.material_container h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.material_container h5 {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.material_container .materialCard img {
+	width: 100%;
+}
+
+
+.material_container .materialCard {
+	margin: 6rem 0rem;
+}
+
+.material_container .materialCard .materialCard_text {
+	margin-left: 2rem;
+}
+
+.material_container .materialCard h3 {
+	font-size: 2.2rem;
+}
+/* ==================== MATERIAL SECTION STYLING END ==================== */ 
+
+
+/* ==================== MEDIA QUERIES START ==================== */ 
+@media screen and (max-width: 1100px) {
+	.about_container, .service_container h5, .manufacturing_container h1, .manufacturing_container h5, .deliveryDetails_container, .innerApplication_container, .innerStartUp_container, .material_container, .ourWork_container h1, .ourWork_container h5, .WCU_container, .innerContact_container, .innerFooter_container {
+		padding-left: 2.2rem !important;	
+		padding-right: 2.2rem !important;	
+	}
+	.material_container .materialCard .materialCard_text {
+		margin-left: 0rem;
+	}
+ 	
+}
+/* ==================== MEDIA QUERIES END ==================== */ 

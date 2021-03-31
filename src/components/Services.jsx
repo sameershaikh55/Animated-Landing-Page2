@@ -56,9 +56,17 @@ const Services = () => {
 		initialSlide: 0,
 		responsive: [
 			{
-				breakpoint: 1360,
+				breakpoint: 1020,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+				},
+			},
+			{
+				breakpoint: 660,
+				settings: {
+					slidesToShow: 1,
 					slidesToScroll: 1,
 					infinite: true,
 				},
@@ -66,7 +74,7 @@ const Services = () => {
 		],
 	};
 	return (
-		<div className="service_container">
+		<div id="services" className="service_container">
 			<h1>
 				<span className="heading_underline">Nos </span>services
 			</h1>

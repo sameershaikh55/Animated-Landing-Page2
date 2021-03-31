@@ -3,7 +3,9 @@ import ProgressiveImage from "react-progressive-image";
 import Img from "../assets/heroImg.svg";
 import Logo from "../assets/logo.svg";
 
-const Header = () => {
+import { Link } from "react-scroll";
+
+const Header = ({ ClickEvent }) => {
 	window.addEventListener("scroll", function () {
 		var header = document.querySelector(".NavbarContainer");
 		header.classList.toggle("sticky", window.scrollY > 1);
@@ -11,15 +13,14 @@ const Header = () => {
 
 	return (
 		<div>
-			<div className="container">
+			<div id="header" className="container">
 				<div className="row">
 					<div className="col-10 mx-auto">
 						<div className="NavbarContainer">
-							{/* <Link to="upperNavbar" smooth={true} duration={600}> */}
-							<img src={Logo} alt={Logo} />
-							{/* <h1>Cloudy</h1> */}
-							{/* </Link> */}
-							<div className="NavbarToggleBtn">
+							<Link to="header" smooth={true} duration={600}>
+								<img src={Logo} alt={Logo} />
+							</Link>
+							<div onClick={ClickEvent} className="NavbarToggleBtn">
 								<button className="navbar-toggler collapsed" type="button">
 									<span className="menu-btn d-inline-block" id="menu-btn">
 										<span className="line"></span>
@@ -30,77 +31,64 @@ const Header = () => {
 								</button>
 							</div>
 							<ul>
-								<li>
-									{/* <Link
+								<Link
 									activeClass="activeNav"
-									to="home"
+									to="aboutUs"
 									smooth={true}
 									duration={600}
 									spy={true}
-									offset={-500}
-								> */}
-									Mekanisk
-									{/* </Link> */}
-								</li>
-								<li>
-									{/* <Link
+								>
+									<li>Mekanisk</li>
+								</Link>
+								<Link
 									activeClass="activeNav"
-									to="about"
+									to="material"
 									smooth={true}
 									duration={600}
 									spy={true}
-									offset={-200}
-								> */}
-									Matériaux
-									{/* </Link> */}
-								</li>
-								<li>
-									{/* <Link
+								>
+									<li>Matériaux</li>
+								</Link>
+								<Link
 									activeClass="activeNav"
-									to="service"
+									to="application"
 									smooth={true}
 									duration={600}
 									spy={true}
-								> */}
-									Easi – evaluation in ayres <br /> sensory integration
-									{/* </Link> */}
-								</li>
-								<li>
-									{/* <Link
+								>
+									<li>
+										Easi – evaluation in ayres <br /> sensory integration
+									</li>
+								</Link>
+								<Link
 									activeClass="activeNav"
-									to="hosting"
+									to="services"
 									smooth={true}
 									duration={600}
 									spy={true}
 									offset={-120}
-								> */}
-									Nos produits
-									{/* </Link> */}
-								</li>
-								<li>
-									{/* <Link
+								>
+									<li>Nos produits</li>
+								</Link>
+								<Link
+									activeClass="activeNav"
+									to="contact"
+									smooth={true}
+									duration={600}
+									spy={true}
+								>
+									<li>Contact</li>
+								</Link>
+								<Link
 									activeClass="activeNav"
 									to="contact"
 									smooth={true}
 									duration={600}
 									spy={true}
 									offset={-105}
-								> */}
-									Contact
-									{/* </Link> */}
-								</li>
-								<li>
-									{/* <Link
-									activeClass="activeNav"
-									to="contact"
-									smooth={true}
-									duration={600}
-									spy={true}
-									offset={-105}
-								> */}
-									English
-									{/* </Link> */}
-								</li>
+								>
+									<li>English</li>
+								</Link>
 							</ul>
 						</div>
 					</div>

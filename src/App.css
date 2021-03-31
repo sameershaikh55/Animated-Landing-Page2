@@ -18,13 +18,42 @@ html {
 }
 
 /* MEDIA QUERIES FONT SIZE START */
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 	html {
 		font-size: 60%;
 	}
 }
-/* MEDIA QUERIES FONT SIZE END */
 
+@media screen and (max-width: 700px) {
+	html {
+		font-size: 58%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	html {
+		font-size: 54%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	html {
+		font-size: 48%;
+	}
+}
+
+@media screen and (max-width: 250px) {
+	html {
+		font-size: 46%;
+	}
+}
+/* MEDIA QUERIES FONT SIZE END */
 
 body {
 	width: 100%;
@@ -40,10 +69,22 @@ body {
 	font-size: 1.5rem;
 	letter-spacing: 1.3px;
 	font-weight: 600;
+	transition: 0.6s;
+}
+
+.G_btn:hover {
+	background-color: #6aaf2e;
 }
 
 .heading_underline {
 	border-bottom: 4px solid var(--themeColor);
+}
+
+a {
+	text-decoration: none !important;
+}
+a:hover {
+	text-decoration: none !important;
 }
 /* ==================== GLOBAL CLASSES END ======================== */
 
@@ -74,13 +115,14 @@ body {
 	align-items: center;
 	transition: 0.7s;
 	z-index: 10000;
-	padding: 0rem 1.5rem;
+	padding: 0.2rem 1.5rem;
 	border-bottom: 1px solid #707070;
 }
 
 .NavbarContainer img {
 	height: 4.2rem;
 	margin-left: 1rem;
+	cursor: pointer;
 }
 
 .NavbarContainer ul {
@@ -108,7 +150,7 @@ body {
 	cursor: pointer;
 	height: 100%;
 	height: 57px;
-	padding: 16px;
+	padding: 20px 16px;
 	border-left: 0.1px solid #707070;
 }
 
@@ -117,17 +159,43 @@ body {
 	padding: 3px 8px;
 }
 
-.NavbarContainer ul li:hover {
+.NavbarContainer ul li {
+	background-color: transparent;
+	-webkit-box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
+	box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
+	position: relative;
+	z-index: 1;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.NavbarContainer ul li::before {
+	top: 50%;
+	left: 50%;
+	width: 0%;
+	z-index: -1;
+	height: 100%;
+	content: "";
+	position: absolute;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	background-color: var(--themeColor);
-	transition: 1s;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.NavbarContainer ul li:hover::before {
+	width: 100%;
 }
 
 .activeNav {
 	color: white;
 	background-color: var(--SubThemeC2);
 	border-radius: 6px;
-	padding: 3px 8px !important;
 	transition: 1s;
+	text-decoration: none;
 }
 
 .activeNav:hover {
@@ -138,7 +206,12 @@ body {
 	box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
 	position: fixed;
 	margin-top: 0rem;
-	background-color: black;
+	background-color: rgb(22, 22, 22) !important;
+	padding: 0rem 1.5rem;
+}
+
+.NavbarContainer.sticky ul li {
+	padding: 16px;
 }
 
 .NavbarContainer.sticky ul li {
@@ -154,8 +227,8 @@ body {
 }
 
 .NavbarContainer .navbar-toggler {
-	padding: 2px 10px;
-	background: #007bfc;
+	padding: 2px 30px;
+	/* background: #007bfc; */
 }
 
 .NavbarContainer .menu-btn {
@@ -189,9 +262,12 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-	.NavbarContainer,
+	.NavbarContainer {
+		padding: 2.5rem 2rem;
+	}
+
 	.NavbarContainer.sticky {
-		padding: 2.5rem 6rem;
+		padding: 1.4rem 2rem !important;
 	}
 }
 
@@ -208,19 +284,88 @@ body {
 	.NavbarContainer.sticky h1 {
 		color: white;
 	}
-	.NavbarContainer ul {
-		display: none;
-	}
 }
 
 @media screen and (max-width: 800px) {
 	.NavbarContainer,
 	.NavbarContainer.sticky {
-		padding: 2rem 1.5rem;
+		padding: 2rem 1rem;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.NavbarToggleBtn {
+		display: block;
+	}
+	.NavbarContainer ul {
+		display: none;
 	}
 }
 
 /* ==================== NAVBAR STYLING END ======================== */
+
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+	position: fixed;
+	right: 0%;
+	left: 0%;
+	bottom: 0%;
+	color: white;
+	font-size: 3.5rem;
+	background-color: black;
+	height: 100vh;
+	padding: 0rem 8rem;
+	z-index: 11111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+.SideBarContainer ul li {
+	position: relative;
+	list-style: none;
+	margin-bottom: 5rem;
+	cursor: pointer;
+	padding: 0.4rem 1.5rem;
+	border-radius: 6px;
+}
+
+.SideBarContainer ul li:before,
+.SideBarContainer ul li:hover:before {
+	transform: scaleY(1);
+	width: 100%;
+}
+
+.SideBarContainer ul li:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 100%;
+	background-color: var(--themeColor);
+	transform: scaleY(0);
+	transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+		background-color 0.2s;
+	transform-origin: bottom;
+	z-index: -1;
+}
+
+.SideBarContainer ul li {
+	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.CrossBTn {
+	position: absolute;
+	top: 3.2%;
+	right: 5.5%;
+	cursor: pointer;
+}
+/* ==================== SideBAR STYLING END ======================== */
 
 /* ==================== HOME STYLING START ======================== */
 .home_container {
@@ -606,7 +751,7 @@ body {
 
 /* ==================== DELIVERY SLIDER STYLING START ==================== */
 .deliverySlider_conatiner {
-	/* background: url(./assets/detailbg.svg); */
+	/* background-image: url(./assets/deliveryBg.svg); */
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url(./assets/deliveryImage.jpg);
 	background-position: center;
@@ -712,6 +857,10 @@ body {
 }
 
 .contact_container h5 {
+	max-width: 600px;
+}
+
+.contact_container .sub_Heading {
 	font-size: 1.6rem;
 	margin: auto;
 	text-align: center;
@@ -814,7 +963,7 @@ body {
 	font-size: 1.3rem;
 	line-height: 2rem;
 }
-/* ==================== FOOTER STYLING END ==================== */ 
+/* ==================== FOOTER STYLING END ==================== */
 
 /* ==================== EXAMPLES APPLICATION STYLING START ==================== */
 .application_container {
@@ -849,18 +998,30 @@ body {
 	margin-right: 1.3rem;
 }
 
-.application_container .innerApplication_container .application_card .applicationCard_body h3 {
+.application_container
+	.innerApplication_container
+	.application_card
+	.applicationCard_body
+	h3 {
 	color: white;
 	font-size: 1.9rem;
 }
 
-.application_container .innerApplication_container .application_card .applicationCard_body h5 {
+.application_container
+	.innerApplication_container
+	.application_card
+	.applicationCard_body
+	h5 {
 	color: var(--lightParagraph);
 	font-size: 1.4rem;
 	line-height: 2rem;
 }
 
-.application_container .innerApplication_container .application_card .applicationCard_body button {
+.application_container
+	.innerApplication_container
+	.application_card
+	.applicationCard_body
+	button {
 	font-size: 1.5rem;
 	background: transparent;
 	border: none;
@@ -868,16 +1029,14 @@ body {
 	color: var(--themeColor);
 }
 
+/* ==================== EXAMPLES APPLICATION STYLING END ==================== */
 
-/* ==================== EXAMPLES APPLICATION STYLING END ==================== */ 
-
-/* ==================== MATERIAL SECTION STYLING START ==================== */ 
+/* ==================== MATERIAL SECTION STYLING START ==================== */
 .materialCard_heading {
 	border-top: 7px solid var(--themeColor);
 	border-left: 7px solid var(--themeColor);
 	padding-left: 4px;
 }
-
 
 .material_container {
 	margin: auto;
@@ -899,7 +1058,6 @@ body {
 	width: 100%;
 }
 
-
 .material_container .materialCard {
 	margin: 6rem 0rem;
 }
@@ -911,18 +1069,139 @@ body {
 .material_container .materialCard h3 {
 	font-size: 2.2rem;
 }
-/* ==================== MATERIAL SECTION STYLING END ==================== */ 
 
+.materialDot {
+	color: var(--themeColor);
+	font-size: 1.8rem;
+}
+/* ==================== MATERIAL SECTION STYLING END ==================== */
 
-/* ==================== MEDIA QUERIES START ==================== */ 
+/* ==================== MEDIA QUERIES START ==================== */
 @media screen and (max-width: 1100px) {
-	.about_container, .service_container h5, .manufacturing_container h1, .manufacturing_container h5, .deliveryDetails_container, .innerApplication_container, .innerStartUp_container, .material_container, .ourWork_container h1, .ourWork_container h5, .WCU_container, .innerContact_container, .innerFooter_container {
-		padding-left: 2.2rem !important;	
-		padding-right: 2.2rem !important;	
+	.about_container,
+	.service_container h5,
+	.manufacturing_container h1,
+	.manufacturing_container h5,
+	.deliveryDetails_container,
+	.innerApplication_container,
+	.innerStartUp_container,
+	.material_container,
+	.ourWork_container h1,
+	.ourWork_container h5,
+	.WCU_container,
+	.innerContact_container,
+	.innerFooter_container {
+		padding-left: 2.2rem !important;
+		padding-right: 2.2rem !important;
 	}
 	.material_container .materialCard .materialCard_text {
 		margin-left: 0rem;
 	}
- 	
+
+	.about_container {
+		padding: 10rem;
+	}
+
+	.service_container,
+	.manufacturing_container {
+		padding-bottom: 16rem;
+	}
+
+	.deliveryDetails_container {
+		padding-bottom: 10rem;
+	}
 }
-/* ==================== MEDIA QUERIES END ==================== */ 
+
+@media screen and (max-width: 1100px) {
+	.main_slider_container {
+		padding: 0rem 6rem;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.about_container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about_container .rightSide_text {
+		width: 100%;
+		margin-bottom: 5rem;
+	}
+
+	.about_container .about_img {
+		width: 60%;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.startUp_container .innerStartUp_container .startUp_body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.startUp_container .innerStartUp_container .startUp_body div:nth-child(1) {
+		width: 100%;
+		padding-left: 2rem;
+	}
+
+	.startUp_container .innerStartUp_container .startUp_body div:nth-child(2) {
+		width: 100%;
+		margin: auto;
+		margin: 5rem 0rem 0rem 2rem;
+	}
+
+	.deliveryDetails_container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.deliveryDetails_container .left_side,
+	.deliveryDetails_container .right_side {
+		width: 95%;
+		margin: auto;
+	}
+
+	.deliveryDetails_container .right_side {
+		margin-top: 4rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.innerFooter_container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.innerFooter_container .left_side {
+		width: 90%;
+		margin: auto;
+	}
+
+	.innerFooter_container .right_side {
+		margin-top: 6rem;
+		width: 100%;
+		margin-left: 2.2rem;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.material_container .materialCard {
+		margin: 0px;
+	}
+
+	.material_container .materialCard img {
+		width: 50%;
+	}
+
+	.material_container .materialCardImg {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.home_container .home_body .home_body_inner {
+		padding: 0rem 2rem;
+	}
+}
+/* ==================== MEDIA QUERIES END ==================== */

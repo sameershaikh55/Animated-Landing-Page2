@@ -7,13 +7,13 @@ import Time from "../assets/time.svg";
 
 const Contact = () => {
 	return (
-		<div className="contact_container">
+		<div id="contact" className="contact_container">
 			<div className="innerContact_container">
 				<h1>
 					<span className="heading_underline">CON</span>TACT
 				</h1>
 				<br />
-				<h5>
+				<h5 className="sub_Heading">
 					Aucun projet n'est trop petit ! Contactez nous pour ajouter de la
 					valeur à votre projet et matérialiser vos idées.
 				</h5>
@@ -22,7 +22,7 @@ const Contact = () => {
 				<br />
 				<div className="container-fluid">
 					<div className="row">
-						<div className="left_side col-lg-5 col-md-6 col-sm-12 mb-5">
+						<div className="left_side col-lg-5 col-md-12 col-sm-12 mb-5">
 							<h3>Contactez-nous</h3>
 							<br />
 							<form>
@@ -38,7 +38,7 @@ const Contact = () => {
 								<button>Envoyer</button>
 							</form>
 						</div>
-						<div className="offset-md-1 col-lg-6 col-md-6 col-sm-12">
+						<div className="offset-md-1 col-lg-6 col-md-12 col-sm-12">
 							<div className="right_side">
 								<img className="logo2" src={Logo2} alt={Logo2} />
 								<br />

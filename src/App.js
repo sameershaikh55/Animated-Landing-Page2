@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header.jsx";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -16,26 +17,34 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Application from "./components/Application";
 import Material from "./components/Material";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <AboutUs />
-      <Services />
-      <Manufacturing />
-      <DeliveryDetails />
-      <Examples />
-      <Application />
-      <StartUp />
-      <Material />
-      <OurWork />
-      <Delivery />
-      <WhyChooseUS />
-      <Contact />
-      <Footer />
-    </div>
-  );
+	const [isOpen, setIsOpen] = useState(false);
+
+	const OnClick = () => {
+		setIsOpen(!isOpen);
+	};
+
+	return (
+		<div>
+			<Header ClickEvent={OnClick} />
+			<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
+			<AboutUs />
+			<Services />
+			<Manufacturing />
+			<DeliveryDetails />
+			<Examples />
+			<Application />
+			<StartUp />
+			<Material />
+			<OurWork />
+			<Delivery />
+			<WhyChooseUS />
+			<Contact />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

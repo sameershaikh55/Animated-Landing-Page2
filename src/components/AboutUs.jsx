@@ -3,7 +3,7 @@ import Img from "../assets/aboutImg.svg";
 
 const AboutUs = () => {
 	return (
-		<div className="about_container">
+		<div id="aboutUs" className="about_container">
 			<div className="rightSide_text">
 				<h3>À propos de nous</h3>
 				<h1>qui nous sommes</h1>

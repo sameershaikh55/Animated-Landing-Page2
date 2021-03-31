@@ -36,7 +36,7 @@ const OurWork = () => {
 				<div className="row">
 					{data.map((prev) => {
 						return (
-							<div className="work_card col-lg-4 col-md-6 col-sm-12">
+							<div className="work_card col-lg-4 col-md-6 col-sm-6 col-6">
 								<img src={prev} alt={prev} />
 							</div>
 						);

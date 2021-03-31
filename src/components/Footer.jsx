@@ -4,7 +4,7 @@ import Logo from "../assets/logo.svg";
 const Footer = () => {
 	return (
 		<>
-			<div className="footer_container">
+			<div id="footer" className="footer_container">
 				<div className="innerFooter_container">
 					<div className="left_side">
 						<img className="logo" src={Logo} alt={Logo} />
@@ -20,7 +20,7 @@ const Footer = () => {
 					<div className="right_side">
 						<div className="container-fluid">
 							<div className="row">
-								<div className="col-lg-3 col-md-6">
+								<div className="col-lg-3 col-md-3 col-sm-6">
 									<h3>
 										<span className="heading_underline">À pro</span>po de nous
 									</h3>
@@ -32,7 +32,7 @@ const Footer = () => {
 										<li>Lorem</li>
 									</ul>
 								</div>
-								<div className="col-lg-3 col-md-6">
+								<div className="col-lg-3 col-md-3 col-sm-6 ">
 									<h3>
 										<span className="heading_underline">Un e</span>rvice
 									</h3>
@@ -44,8 +44,10 @@ const Footer = () => {
 										<li>Usinage</li>
 									</ul>
 								</div>
-								<div className="col-lg-2 col-md-6">
-									<h3 className="heading_underline">Easi</h3>
+								<div className="col-lg-2 col-md-3 col-sm-6  mt-5 mt-md-0">
+									<h3>
+										<span className="heading_underline">Easi</span>
+									</h3>
 									<br />
 									<ul>
 										<li>Lorem</li>
@@ -54,7 +56,7 @@ const Footer = () => {
 										<li>Lorem</li>
 									</ul>
 								</div>
-								<div className="col-lg-3 col-md-6 col-sm-12">
+								<div className="col-lg-3 col-md-3 col-sm-6  mt-5 mt-md-0">
 									<h3>
 										<span className="heading_underline">Cont</span>actez-nous
 									</h3>

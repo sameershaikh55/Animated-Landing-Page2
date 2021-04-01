@@ -61,19 +61,45 @@ body {
 
 /* ==================== GLOBAL CLASSES START ======================== */
 .G_btn {
-	padding: 10px 24px;
 	border: none;
-	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	color: #fff;
+	font-weight: 700;
+	font-size: 15px;
 	background-color: var(--themeColor);
-	color: white;
-	font-size: 1.5rem;
-	letter-spacing: 1.3px;
-	font-weight: 600;
-	transition: 0.6s;
+	padding: 12px 24px;
+	margin: 0 auto;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
 }
 
-.G_btn:hover {
-	background-color: #6aaf2e;
+.G_btn span {
+	position: relative;
+	z-index: 1;
+}
+
+.G_btn:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 490%;
+	width: 180%;
+	background: #70b633;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+	transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.G_btn:hover:after {
+	-webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+	transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
 
 .heading_underline {
@@ -83,16 +109,12 @@ body {
 a {
 	text-decoration: none !important;
 }
+
 a:hover {
 	text-decoration: none !important;
 }
-/* ==================== GLOBAL CLASSES END ======================== */
 
-/* ==================== LOGO NAVBAR STYLING START ======================== */
-.NavbarContainer h1 {
-	cursor: pointer;
-}
-/* ==================== LOGO NAVBAR STYLING END ======================== */
+/* ==================== GLOBAL CLASSES END ======================== */
 
 /* ==================== NAVBAR STYLING START ======================== */
 @media screen and (min-width: 1200px) {
@@ -117,12 +139,18 @@ a:hover {
 	z-index: 10000;
 	padding: 0.2rem 1.5rem;
 	border-bottom: 1px solid #707070;
+	-webkit-animation: swing-in-top-fwd 0.8s
+		cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+	animation: swing-in-top-fwd 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 .NavbarContainer img {
 	height: 4.2rem;
 	margin-left: 1rem;
 	cursor: pointer;
+	-webkit-animation: scale-up-hor-center 0.6s
+		cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	animation: scale-up-hor-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .NavbarContainer ul {
@@ -228,7 +256,6 @@ a:hover {
 
 .NavbarContainer .navbar-toggler {
 	padding: 2px 30px;
-	/* background: #007bfc; */
 }
 
 .NavbarContainer .menu-btn {
@@ -255,10 +282,6 @@ a:hover {
 	.NavbarContainer.sticky {
 		padding: 2.5rem 5rem;
 	}
-	/* .NavbarContainer h1,
-	.NavbarContainer.sticky h1 {
-		font-size: 2.2rem;
-	} */
 }
 
 @media screen and (max-width: 1024px) {
@@ -399,6 +422,8 @@ a:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .home_body_inner h1 {
@@ -1205,3 +1230,77 @@ a:hover {
 	}
 }
 /* ==================== MEDIA QUERIES END ==================== */
+
+/* ==================== ANIMATIONS START ==================== */
+@-webkit-keyframes swing-in-top-fwd {
+	0% {
+		-webkit-transform: rotateX(-100deg);
+		transform: rotateX(-100deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1;
+	}
+}
+@keyframes swing-in-top-fwd {
+	0% {
+		-webkit-transform: rotateX(-100deg);
+		transform: rotateX(-100deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes scale-up-hor-center {
+	0% {
+		-webkit-transform: scaleX(0.4);
+		transform: scaleX(0.4);
+	}
+	100% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+@keyframes scale-up-hor-center {
+	0% {
+		-webkit-transform: scaleX(0.4);
+		transform: scaleX(0.4);
+	}
+	100% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* ==================== ANIMATIONS END ==================== */

@@ -6,6 +6,7 @@ import example4 from "../assets/example4.svg";
 import example5 from "../assets/example5.svg";
 import example6 from "../assets/example6.svg";
 import ExampleCard from "./ExampleCard";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const Examples = () => {
 	const data = [
@@ -20,9 +21,11 @@ const Examples = () => {
 	return (
 		<div className="examples_container">
 			<div className="innerExamples_container">
-				<h1>
-					<span className="heading_underline">EXEM</span>PLES
-				</h1>
+				<LightSpeed>
+					<h1>
+						<span className="heading_underline">EXEM</span>PLES
+					</h1>
+				</LightSpeed>
 				<br />
 				<br />
 				<div className="container-fluid">

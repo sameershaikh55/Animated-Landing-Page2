@@ -1,12 +1,16 @@
 import React from "react";
 import Img from "../assets/aboutImg.svg";
+import { Fade } from "react-reveal";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const AboutUs = () => {
 	return (
 		<div id="aboutUs" className="about_container">
 			<div className="rightSide_text">
 				<h3>À propos de nous</h3>
-				<h1>qui nous sommes</h1>
+				<LightSpeed>
+					<h1>qui nous sommes</h1>
+				</LightSpeed>
 				<br />
 				<h4>
 					Mekanisk se distingue par son service professionnel et personnalisé en
@@ -33,11 +37,15 @@ const AboutUs = () => {
 					respectant vos coûts et délais!
 				</h4>
 				<br />
-				<button className="G_btn">Voir tout</button>
+				<button className="G_btn">
+					<span>Voir tout</span>
+				</button>
 			</div>
-			<div className="about_img">
-				<img src={Img} alt={Img} />
-			</div>
+			<Fade right>
+				<div className="about_img">
+					<img src={Img} alt={Img} />
+				</div>
+			</Fade>
 		</div>
 	);
 };

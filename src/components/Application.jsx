@@ -6,6 +6,8 @@ import Icon4 from "../assets/eIcon4.svg";
 import Icon5 from "../assets/eIcon5.svg";
 import Icon6 from "../assets/eIcon6.svg";
 import Icon7 from "../assets/eIcon7.svg";
+import Fade from "react-reveal/Fade";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const Application = () => {
 	const data = [
@@ -56,9 +58,11 @@ const Application = () => {
 	return (
 		<div id="application" className="application_container">
 			<div className="innerApplication_container">
-				<h1>
-					<span className="heading_underline">EXEMPLE</span>S D'APPLICATION
-				</h1>
+				<LightSpeed>
+					<h1>
+						<span className="heading_underline">EXEMPLE</span>S D'APPLICATION
+					</h1>
+				</LightSpeed>
 				<br />
 				<br />
 				<br />
@@ -71,14 +75,16 @@ const Application = () => {
 							const { title, img, description } = prev;
 							return (
 								<div className="col-lg-4 col-md-6 col-sm-12 mb-5">
-									<div className="application_card">
-										<img src={img} alt={img} />
-										<div className="applicationCard_body">
-											<h3> {title} </h3>
-											<h5> {description} </h5>
-											<button>READ MORE</button>
+									<Fade left cascade>
+										<div className="application_card">
+											<img src={img} alt={img} />
+											<div className="applicationCard_body">
+												<h3> {title} </h3>
+												<h5> {description} </h5>
+												<button>READ MORE</button>
+											</div>
 										</div>
-									</div>
+									</Fade>
 								</div>
 							);
 						})}

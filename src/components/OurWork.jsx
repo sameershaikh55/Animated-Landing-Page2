@@ -5,6 +5,8 @@ import React from "react";
 // import work4 from "../assets/work4.svg";
 import work5 from "../assets/work5.svg";
 import work6 from "../assets/work6.svg";
+import LightSpeed from "react-reveal/LightSpeed";
+import Flip from "react-reveal/Flip";
 
 const OurWork = () => {
 	const data = [
@@ -18,9 +20,11 @@ const OurWork = () => {
 
 	return (
 		<div className="ourWork_container">
-			<h1>
-				<span className="heading_underline">Notre</span> travail
-			</h1>
+			<LightSpeed>
+				<h1>
+					<span className="heading_underline">Notre</span> travail
+				</h1>
+			</LightSpeed>
 			<br />
 			<br />
 			<h5>
@@ -37,7 +41,9 @@ const OurWork = () => {
 					{data.map((prev) => {
 						return (
 							<div className="work_card col-lg-4 col-md-6 col-sm-6 col-6">
-								<img src={prev} alt={prev} />
+								<Flip left cascade>
+									<img src={prev} alt={prev} />
+								</Flip>
 							</div>
 						);
 					})}

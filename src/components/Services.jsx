@@ -4,6 +4,7 @@ import ServiceCard from "./ServiceCard";
 import service1 from "../assets/service1.svg";
 import service2 from "../assets/service2.svg";
 import service3 from "../assets/service3.svg";
+import Fade from "react-reveal/Fade";
 
 const Services = () => {
 	const data = [
@@ -49,7 +50,7 @@ const Services = () => {
 
 	var settings = {
 		dots: true,
-		infinite: false,
+		infinite: true,
 		speed: 500,
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -74,35 +75,37 @@ const Services = () => {
 		],
 	};
 	return (
-		<div id="services" className="service_container">
-			<h1>
-				<span className="heading_underline">Nos </span>services
-			</h1>
-			<h5>
-				MEKANISK propose des services de fabrication additive (impression 3D) de
-				haute qualité, permettant des pièces robustes (qui peuvent être
-				renforcées avec des fibres composites, des résines, des inserts
-				métalliques, etc.) et une expertise en conception 3D pour fabrication
-				additive (DFAM)
-			</h5>
-			<br />
-			<br />
-			<div className="main_slider_container">
-				<Slider {...settings}>
-					{data.map((prev) => {
-						const { img, title, description, classN } = prev;
-						return (
-							<ServiceCard
-								title={title}
-								img={img}
-								description={description}
-								classN={classN}
-							/>
-						);
-					})}
-				</Slider>
+		<Fade bottom>
+			<div id="services" className="service_container">
+				<h1>
+					<span className="heading_underline">Nos </span>services
+				</h1>
+				<h5>
+					MEKANISK propose des services de fabrication additive (impression 3D)
+					de haute qualité, permettant des pièces robustes (qui peuvent être
+					renforcées avec des fibres composites, des résines, des inserts
+					métalliques, etc.) et une expertise en conception 3D pour fabrication
+					additive (DFAM)
+				</h5>
+				<br />
+				<br />
+				<div className="main_slider_container">
+					<Slider {...settings}>
+						{data.map((prev) => {
+							const { img, title, description, classN } = prev;
+							return (
+								<ServiceCard
+									title={title}
+									img={img}
+									description={description}
+									classN={classN}
+								/>
+							);
+						})}
+					</Slider>
+				</div>
 			</div>
-		</div>
+		</Fade>
 	);
 };
 

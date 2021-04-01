@@ -2,6 +2,7 @@ import React from "react";
 import ProgressiveImage from "react-progressive-image";
 import Img from "../assets/heroImg.svg";
 import Logo from "../assets/logo.svg";
+import Zoom from "react-reveal/Zoom";
 
 import { Link } from "react-scroll";
 
@@ -108,12 +109,16 @@ const Header = ({ ClickEvent }) => {
 							/>
 							<div className="home_body">
 								<div className="home_body_inner">
-									<h1>Bienvenue chez Mekanisk</h1>
+									<Zoom right cascade>
+										<h1>Bienvenue chez Mekanisk</h1>
+									</Zoom>
 									<br />
 									<h4>Services de conception et de fabrication additive</h4>
 									<h4>Impression 3D industrielle</h4>
 									<br />
-									<button className="G_btn">Soumission</button>
+									<button class="G_btn">
+										<span>Soumission</span>
+									</button>
 								</div>
 							</div>
 						</div>

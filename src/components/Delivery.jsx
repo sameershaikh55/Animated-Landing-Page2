@@ -1,5 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
+import Bounce from "react-reveal/Bounce";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const Delivery = () => {
 	const data = [
@@ -53,9 +55,11 @@ const Delivery = () => {
 	return (
 		<div className="deliverySlider_conatiner">
 			<div className="innerDeliverySlider_conatiner">
-				<h1>
-					<span className="heading_underline">Livra</span>ison
-				</h1>
+				<LightSpeed>
+					<h1>
+						<span className="heading_underline">Livra</span>ison
+					</h1>
+				</LightSpeed>
 				<br />
 				<br />
 				<br />
@@ -65,9 +69,11 @@ const Delivery = () => {
 							const { description } = prev;
 							return (
 								<>
-									<h5> {description} </h5>
-									<br />
-									<button className="G_btn py-3 px-4">Contactez-nous</button>
+									<Bounce cascade>
+										<h5> {description} </h5>
+										<br />
+										<button className="G_btn py-3 px-4">Contactez-nous</button>
+									</Bounce>
 								</>
 							);
 						})}

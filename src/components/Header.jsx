@@ -1,6 +1,6 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-image";
-import Img from "../assets/heroImg.svg";
+import Img from "../assets/heroImg (1)-min-min (1).png";
 import Logo from "../assets/logo.svg";
 import Zoom from "react-reveal/Zoom";
 

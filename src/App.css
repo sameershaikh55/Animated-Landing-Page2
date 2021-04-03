@@ -57,6 +57,7 @@ html {
 
 body {
 	width: 100%;
+	overflow-x: hidden;
 }
 
 /* ==================== GLOBAL CLASSES START ======================== */
@@ -114,6 +115,14 @@ a:hover {
 	text-decoration: none !important;
 }
 
+figure {
+	width: 300px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
 /* ==================== GLOBAL CLASSES END ======================== */
 
 /* ==================== NAVBAR STYLING START ======================== */

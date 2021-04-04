@@ -38,7 +38,7 @@ function App() {
 		<>
 			{loading ? (
 				<div className="loader">
-					<HashLoader color="#36D7B7" size={80} />
+					<HashLoader color="#7dcb3b" size={80} />
 				</div>
 			) : (
 				<div>

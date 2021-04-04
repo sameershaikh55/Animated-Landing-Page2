@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../assets/aboutImg.png";
+import Img from "../assets/images/aboutImg.png";
 import { Fade } from "react-reveal";
 import LightSpeed from "react-reveal/LightSpeed";
 

@@ -3,8 +3,8 @@ import React from "react";
 // import work2 from "../assets/work2.svg";
 // import work3 from "../assets/work3.svg";
 // import work4 from "../assets/work4.svg";
-import work5 from "../assets/work5.svg";
-import work6 from "../assets/work6.svg";
+import work5 from "../assets/images/work5.png";
+import work6 from "../assets/images/work6.png";
 import LightSpeed from "react-reveal/LightSpeed";
 import Flip from "react-reveal/Flip";
 

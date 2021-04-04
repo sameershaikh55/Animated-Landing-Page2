@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import ManufacturingCard from "./ManufacturingCard";
-import Manufacturing1 from "../assets/manufacturing1.svg";
+import Manufacturing1 from "../assets/images/manufacturing1.png";
 import Manufacturing2 from "../assets/manufacturing2.svg";
-import Manufacturing3 from "../assets/manufacturing3.svg";
+import Manufacturing3 from "../assets/images/manufacturing3.png";
 import Fade from "react-reveal/Fade";
 
 const Manufacturing = () => {

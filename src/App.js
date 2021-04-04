@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header.jsx";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -18,32 +18,46 @@ import Footer from "./components/Footer";
 import Application from "./components/Application";
 import Material from "./components/Material";
 import Sidebar from "./components/Sidebar";
+import HashLoader from "react-spinners/HashLoader";
 
 function App() {
+	const [loading, setLoading] = useState(true);
 	const [isOpen, setIsOpen] = useState(false);
+
+	useEffect(() => {
+		setLoading(false);
+	}, []);
 
 	const OnClick = () => {
 		setIsOpen(!isOpen);
 	};
 
 	return (
-		<div>
-			<Header ClickEvent={OnClick} />
-			<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
-			<AboutUs />
-			<Services />
-			<Manufacturing />
-			<DeliveryDetails />
-			<Examples />
-			<Application />
-			<StartUp />
-			<Material />
-			<OurWork />
-			<Delivery />
-			<WhyChooseUS />
-			<Contact />
-			<Footer />
-		</div>
+		<>
+			{loading ? (
+				<div className="loader">
+					<HashLoader color="#36D7B7" size={80} />
+				</div>
+			) : (
+				<div>
+					<Header ClickEvent={OnClick} />
+					<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
+					<AboutUs />
+					<Services />
+					<Manufacturing />
+					<DeliveryDetails />
+					<Examples />
+					<Application />
+					<StartUp />
+					<Material />
+					<OurWork />
+					<Delivery />
+					<WhyChooseUS />
+					<Contact />
+					<Footer />
+				</div>
+			)}
+		</>
 	);
 }
 

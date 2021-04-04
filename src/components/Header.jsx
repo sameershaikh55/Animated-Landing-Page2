@@ -1,6 +1,6 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-image";
-import Img from "../assets/heroImg (1)-min-min (1).png";
+// import ProgressiveImage from "react-progressive-image";
+// import Img from "../assets/heroImg (1)-min-min (1).png";
 import Logo from "../assets/logo.svg";
 import Zoom from "react-reveal/Zoom";
 
@@ -96,34 +96,34 @@ const Header = ({ ClickEvent }) => {
 				</div>
 			</div>
 			<div>
-				<ProgressiveImage delay={400} src={Img} placeholder={Img}>
-					{(src, loading) => (
-						<div className="home_container">
-							<img
+				{/* <ProgressiveImage delay={400} src={Img} placeholder={Img}> */}
+				{/* {(src, loading) => ( */}
+				<div className="home_container">
+					{/* <img
 								style={{
 									filter: loading ? "blur(4px)" : "blur(0px)",
 									backgroundColor: "rgba(0,0,0,0.2)",
 								}}
 								src={src}
 								alt="bacground"
-							/>
-							<div className="home_body">
-								<div className="home_body_inner">
-									<Zoom right cascade>
-										<h1>Bienvenue chez Mekanisk</h1>
-									</Zoom>
-									<br />
-									<h4>Services de conception et de fabrication additive</h4>
-									<h4>Impression 3D industrielle</h4>
-									<br />
-									<button class="G_btn">
-										<span>Soumission</span>
-									</button>
-								</div>
-							</div>
+							/> */}
+					<div className="home_body">
+						<div className="home_body_inner">
+							<Zoom right cascade>
+								<h1>Bienvenue chez Mekanisk</h1>
+							</Zoom>
+							<br />
+							<h4>Services de conception et de fabrication additive</h4>
+							<h4>Impression 3D industrielle</h4>
+							<br />
+							<button class="G_btn">
+								<span>Soumission</span>
+							</button>
 						</div>
-					)}
-				</ProgressiveImage>
+					</div>
+				</div>
+				{/* )}
+				</ProgressiveImage> */}
 			</div>
 		</div>
 	);

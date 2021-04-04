@@ -25,7 +25,9 @@ function App() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		setLoading(false);
+		setTimeout(() => {
+			setLoading(false);
+		}, 3000);
 	}, []);
 
 	const OnClick = () => {

@@ -517,6 +517,154 @@ figure {
 	margin: auto;
 	max-width: 1000px;
 }
+
+/* SERVICE CARD IMAGE HOVER EFFECT START */
+figure.snip0023 {
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	transition: 1s all;
+	height: 100%;
+}
+figure.snip0023 img {
+	opacity: 1;
+	width: 100%;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.snip0023 > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		-135deg,
+		#000000 0%,
+		transparent 40%,
+		rgba(255, 255, 255, 0.15)
+	);
+}
+
+figure.snip0023 > div:hover {
+	background-image: linear-gradient(
+		-135deg,
+		transparent 0%,
+		transparent 40%,
+		rgba(255, 255, 255, 0)
+	);
+}
+
+figure.snip0023 > div::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	opacity: 0;
+	-webkit-transition: opacity 0.4s;
+	transition: opacity 0.4s;
+	/* background-image: linear-gradient(
+		-135deg,
+		#000000 0%,
+		transparent 40%,
+		rgba(255, 255, 255, 0.15)
+	); */
+}
+figure.snip0023 .curl {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: linear-gradient(
+		405deg,
+		#ffffff,
+		#f3f3f3 20%,
+		#bbbbbb 38%,
+		#aaaaaa 44%,
+		#888888 50%,
+		#f2f2f2 50%,
+		#f1f1f1 60%,
+		#f0f0f0
+	);
+	/* background: linear-gradient(
+		405deg,
+		#ffffff,
+		#f3f3f3 20%,
+		#bbbbbb 38%,
+		#aaaaaa 44%,
+		#888888 50%,
+		rgba(0, 0, 0, 0.7) 50%,
+		rgba(0, 0, 0, 0.4) 60%,
+		rgba(0, 0, 0, 0.3)
+	); */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transition: all 0.4s ease;
+
+	width: 75px;
+	height: 75px;
+}
+figure.snip0023 .curl:before,
+figure.snip0023 .curl:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 12%;
+	bottom: 6%;
+	width: 70%;
+	max-width: 300px;
+	max-height: 100px;
+	height: 55%;
+	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+	transform: skew(-10deg) rotate(-6deg);
+}
+figure.snip0023 .curl:after {
+	left: auto;
+	right: 6%;
+	bottom: auto;
+	top: 14%;
+	transform: skew(-15deg) rotate(-84deg);
+}
+figure.snip0023:hover > div::before,
+figure.snip0023.hover > div::before {
+	opacity: 1;
+}
+figure.snip0023:hover .curl,
+figure.snip0023.hover .curl {
+	width: 0px;
+	height: 0px;
+}
+
+figure.snip0023 .text {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	letter-spacing: 1.5px;
+	position: absolute;
+	bottom: -100%;
+	left: 0%;
+	padding: 245px 11px 8px 8px;
+	font-weight: 600;
+	transition: 0.3s all;
+	opacity: 0;
+	width: 100%;
+	background-image: linear-gradient(
+		4deg,
+		#000000 0%,
+		transparent 68%,
+		rgba(0, 0, 0, 0)
+	);
+}
+
+figure.snip0023:hover .text {
+	bottom: 0%;
+	opacity: 1;
+}
+/* SERVICE CARD IMAGE HOVER EFFECT END */
+
 /* ==================== SERVICES STYLING END ======================== */
 
 /* ==================== SERVICE CARD STYLING START ======================== */
@@ -852,7 +1000,7 @@ figure {
 	font-size: 1.5rem;
 	margin: auto;
 }
-/* ==================== OUR WORK STYLING END ==================== */
+/* ==================== WORK STYLING END ==================== */
 
 /* ==================== WORK CARD STYLING START ==================== */
 .work_card {

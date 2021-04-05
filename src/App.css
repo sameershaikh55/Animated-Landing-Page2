@@ -410,13 +410,11 @@ figure {
 
 /* ==================== HOME STYLING START ======================== */
 .home_container {
-	background: url(./assets/images/heroimg.png);
-	background-position: center;
+	background: url(./assets/images/heroimg2.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-
 	position: relative;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
